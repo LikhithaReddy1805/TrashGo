@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Garbage Collection App</title>
+
+    <!-- ✅ Modular Firebase SDK -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+      import { getStorage } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-storage.js";
+      import { getAuth } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
+
+      // ✅ Your Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC0bdOYCD6HwoJpCEMCoG3H-4574Z6l7Mw",
+        authDomain: "garbage-collection-application.firebaseapp.com",
+        projectId: "garbage-collection-application",
+        storageBucket: "garbage-collection-application.appspot.com",
+        messagingSenderId: "852007500280",
+        appId: "1:852007500280:web:33a785fb3b81973de5be0d",
+      };
+
+      // ✅ Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app);
+      const storage = getStorage(app);
+    </script>
+
+    <!-- Flutter app setup -->
+    <base href="$FLUTTER_BASE_HREF" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="garbage_collection_app" />
+
+    <!-- Icons and Manifest -->
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+
+  <body>
+    <!-- ✅ reCAPTCHA container must be ABOVE Flutter script -->
+    <div id="recaptcha-container"></div>
+
+    <!-- ✅ Flutter App Entry -->
+    <script src="flutter_bootstrap.js" async></script>
+  </body>
+</html>

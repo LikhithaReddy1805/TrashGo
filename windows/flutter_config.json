@@ -1,0 +1,57 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "garbage-collection-application",
+          "appId": "1:852007500280:android:e42e92dea7a08438e5be0d",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "garbage-collection-application",
+          "configurations": {
+            "android": "1:852007500280:android:e42e92dea7a08438e5be0d",
+            "ios": "1:852007500280:ios:1640d76f1504e3e1e5be0d",
+            "macos": "1:852007500280:ios:1640d76f1504e3e1e5be0d",
+            "web": "1:852007500280:web:32c4aae506882059e5be0d",
+            "windows": "1:852007500280:web:772ccec985686eb8e5be0d"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "disallowLegacyRuntimeConfig": true,
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ],
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true,
+    "firestore": {
+      "port": 8080
+    },
+    "storage": {
+      "port": 9199
+    }
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
